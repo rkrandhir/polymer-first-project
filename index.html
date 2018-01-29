@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>poly</title>
+    <meta name="description" content="my first elem">
+    <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!--<link rel="import" href="/src/custom-element/custom-element.html">-->
+    <link rel="import" href="/src/custom-element/my-element.html">
+    <link rel="import" href="/src/custom-element/shadow-dom-element.html">
+  </head>
+  <body>
+    <my-element></my-element>
+    <shadow-dom-element name="randhir"></shadow-dom-element>
+    <dom-module id="main-document-element">
+      <template>
+        <h1>Polymer</h1>
+      </template>      
+      <script>
+          HTMLImports.whenReady(function() {
+          class MainDocumentElement extends Polymer.Element {
+            static get is() { return 'main-document-element'; }
+          }
+          customElements.define(MainDocumentElement.is, MainDocumentElement);
+        });
+      </script>
+    </dom-module>
+    <main-document-element></main-document-element>
+  </body>
+</html>

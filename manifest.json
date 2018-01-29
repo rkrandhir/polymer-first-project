@@ -1,0 +1,7 @@
+{
+  "name": "poly",
+  "short_name": "poly",
+  "description": "my first elem",
+  "start_url": "/",
+  "display": "standalone"
+}
